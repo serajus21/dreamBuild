@@ -1,0 +1,48 @@
+:root {font-size: 16px; box-sizing: border-box;}
+*, *::after, *::before {padding: 0; margin: 0; box-sizing: inherit;}
+body {background: linear-gradient(to right, rgba(0, 0, 0, 0.842), rgba(0, 0, 0, 0.5678)), url('background.jpg') no-repeat fixed center; background-size: cover;}
+
+/* header */
+header {
+    min-height: 5em; padding: 0.5em 1em; display: flex; justify-content: space-between; align-items: center;
+}
+.link {text-decoration: none; font-size: 1em; padding: .5em 1em; font-weight: bold;}
+.link--brand {color: gray; font-size: 2em; padding: 0;}
+.link--nav {color: white;}
+.link--nav:hover {color: red;}
+.join .link {color: skyblue; margin: 0 0.5em 0 0;}
+.join .link:hover {color: white;}
+.join--startTrial {border: 0.1em solid;}
+.menuBar {font-size: 1.5em; width: 1em; margin: 0 0.5em 0 0; background: transparent; border: none; color: transparent; position: fixed; cursor: pointer;}
+#view {rotate: 90deg;}
+
+/*main*/
+main {
+    position: fixed; bottom: 3em; left: 3.5em;
+}
+.main {display: block; color: white;}
+.main--title {font-size: 4.5em;}
+.main--subtitle {font-size: 1em; margin: 2.5em 0; color: lightgray;}
+.main--button {font-size: 1em; padding: 0.5em 2.5em; background-color: skyblue; font-weight: bold; cursor: pointer;}
+.main--button:hover {background-color: white;}
+.main--offer {margin: 1em 0 0 0; color: gray;}
+
+
+@media (max-width: 870px) {
+    :root {font-size: 13px;}
+}
+@media (max-width: 700px) {
+    :root {font-size: 12px;}
+    .nav {
+        position: fixed; background-color: rgba(0, 0, 0, 0.664); height: 100vh; width: 100%; z-index: 1;
+        top: 5em; right: -100%; display: flex; flex-direction: column; align-items: center; transition: all 250ms ease;
+    }
+    .link--nav {margin-top: 1.5em;}
+    .main--title {font-size: 4em;}
+    .menuBar {position: static; color: white;}
+    #hide {display: none;}
+}
+@media (max-width: 470px) {
+    :root {font-size: 10px;}
+    .main--title {font-size: 3.5em;}
+}
